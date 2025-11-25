@@ -1,12 +1,13 @@
+import React from "react";
 import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-interface ScreenWrapperProps {
-  children: any;
+type ScreenWrapperProps = {
+  children: React.ReactNode;
   bg: string;
-}
+};
 
-function ScreenWrapper(children, bg): ScreenWrapperProps {
+function ScreenWrapper({ children, bg }: ScreenWrapperProps) {
   const { top } = useSafeAreaInsets();
   const paddingTop = top > 0 ? top + 5 : 30;
 
