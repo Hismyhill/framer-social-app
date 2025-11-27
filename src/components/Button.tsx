@@ -11,9 +11,9 @@ import { hp } from "../helper/common";
 type ButtonProps = {
   buttonStyle?: object;
   textStyle?: object;
-  title?: string;
+  title: string;
   onPress: any;
-  isLoading?: boolean;
+  isLoading: boolean;
   hasShadow?: boolean;
 };
 
@@ -22,7 +22,7 @@ const Button = ({
   textStyle,
   title,
   onPress = () => {},
-  isLoading = false,
+  isLoading,
   hasShadow = true,
 }: ButtonProps) => {
   const shadowStyle = {
@@ -51,8 +51,8 @@ const Button = ({
 };
 
 type LoadingSpinnerProps = {
-  size: string;
-  color: string;
+  size?: string;
+  color?: string;
 };
 
 const LoadingSpinner = ({

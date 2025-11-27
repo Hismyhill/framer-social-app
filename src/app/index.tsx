@@ -7,7 +7,7 @@ export default function Index() {
   return (
     <ScreenWrapper bg="none">
       <Text>index</Text>
-      <Button title="welcome" onPress={() => router.push("/WelcomeScreen")} />
+      <Button title="welcome" onPress={() => router.push("/welcome")} />
     </ScreenWrapper>
   );
 }

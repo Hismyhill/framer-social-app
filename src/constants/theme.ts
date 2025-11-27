@@ -7,8 +7,10 @@ export const theme = {
     gray: "#e3e3e3",
 
     text: "#494949",
-    textLight: "#7c7c7c",
     textDark: "#1d1d1d",
+    textLight: "#7c7c7c",
+
+    error: "#ff3535ff",
   },
 
   fonts: {

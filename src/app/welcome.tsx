@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import {
   Image,
   Pressable,
@@ -12,6 +13,7 @@ import { theme } from "../constants/theme";
 import { hp, wp } from "../helper/common";
 
 const WelcomeScreen = () => {
+  const router = useRouter();
   return (
     <ScreenWrapper bg="white">
       <StatusBar style="dark" />
@@ -34,13 +36,14 @@ const WelcomeScreen = () => {
         {/* Footer */}
         <View style={styles.footer}>
           <Button
+            isLoading={false}
             title="Getting Started"
             buttonStyle={{ marginHorizontal: wp(3) }}
             onPress={() => {}}
           />
           <View style={styles.bottomTextContainer}>
             <Text style={styles.loginText}>Already have an account?</Text>
-            <Pressable>
+            <Pressable onPress={() => router.push("login")}>
               <Text
                 style={[
                   styles.loginText,
